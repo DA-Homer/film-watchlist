@@ -142,6 +142,7 @@ main {
   align-items: center;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-grey-light);
+  max-height: 180px;
 }
 
 .poster-wrapper {
@@ -201,9 +202,19 @@ main {
 .add-watchlist {
   background: none;
   border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
-.fa-circle-plus {
+.add-watchlist:hover {
+  box-shadow: 0 0 0 1px var(--color-grey-light);
+}
+
+.add-watchlist:active {
+  background-color: var(--color-grey-light);
+}
+
+.add-watchlist>i {
   font-size: 0.8rem;
   margin-right: 0.3rem;
 }
@@ -230,5 +241,3 @@ main {
   font-weight: 700;
   color: var(--color-grey-light);
 }
-
-/* --- Watchlist Page --- */
