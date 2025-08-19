@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Film Watchlist</title>
+    <title>My Watchlist</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -18,16 +20,13 @@
   </head>
   <body>
     <header class="site-header">
-      <h1 class="site-heading">My Watchlist</h1>
-      <a href="./index.html"
-        ><button id="to-search-btn" class="page-subheading">
-          Search For Films
-        </button></a
-      >
+      <h1 class="search-heading">My Watchlist</h1>
+      <a href="./index.html"><p class="search-subheading">Film Search</p></a>
     </header>
+
     <main>
-      <section id="watchlist-result-area" class="result-area"></section>
+      <div id="watchlist-results" class="film-grid"></div>
     </main>
-    <script src="./script.js"></script>
+    <script src="./watchlist.js"></script>
   </body>
 </html>

@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Film Search</title>
+    <title>Film Watchlist</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -18,31 +20,28 @@
   </head>
   <body>
     <header class="site-header">
-      <h1 class="site-heading">Find Your Film</h1>
-      <a href="./watchlist.html">
-        <button id="subheading-btn" class="page-subheading">
-          My Watchlist
-        </button></a
+      <h1 class="search-heading">Find Your Film</h1>
+      <a href="./watchlist.html"
+        ><p class="search-subheading">My Watchlist</p></a
       >
     </header>
-    <main>
-      <div id="search-wrapper" class="search-wrapper">
-        <div class="search-bar">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input
-            id="search-input"
-            class="search-input"
-            type="text"
-            aria-label="Search Bar"
-            placeholder="Search for a film"
-          />
-          <button id="search-btn" class="search-btn" type="submit">
-            Search
-          </button>
-        </div>
-      </div>
 
-      <section id="result-area" class="result-area"></section>
+    <form id="search-form" class="search-bar" role="search">
+      <div class="search-bar-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          id="search-input"
+          class="search-input"
+          type="text"
+          placeholder="Search films..."
+          aria-label="Search films"
+        />
+        <button id="search-btn" class="search-btn" type="submit">Search</button>
+      </div>
+    </form>
+
+    <main>
+      <div id="film-results" class="film-grid explore-img"></div>
     </main>
     <script src="./script.js"></script>
   </body>
