@@ -19,7 +19,7 @@ async function fetchWatchlistFilms() {
   }
 
   const promises = watchlist.map(id =>
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`)
+    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`)
     .then(res => res.json())
   );
 

@@ -24,13 +24,13 @@ function handleSearch() {
 }
 
 async function fetchFilmInfo(title) {
-  const res = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${title}`)
+  const res = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${title}`)
   const data = await res.json()
   let filmObj = [];
 
   if (data.Response === 'True') {
     const request = data.Search.map(film => {
-      const promises = fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${film.imdbID}`)
+      const promises = fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${film.imdbID}`)
       .then(res => res.json())
       return promises;
     })
